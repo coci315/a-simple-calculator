@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    body{
+      background-color: #ccc;
+    }
+    .u-trigger{
+      display: block;
+      margin: 60px auto;
+      width: 150px;
+      height: 32px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+<!--     <div class="m-calculator">
+        <div class="wrapper">
+            <div class="header">
+                <h3>Caculator by Link.W</h3>
+                <span class="close">X</span>
+            </div>
+            <input class="textbox" type="text" readonly value="123">
+            <div class="buttons">
+                <button class="button" value="AC">AC</button>
+                <button class="button" value="CE">CE</button>
+                <button class="button" value="%">%</button>
+                <button class="button" value="/">/</button>
+                <button class="button" value="7">7</button>
+                <button class="button" value="8">8</button>
+                <button class="button" value="9">9</button>
+                <button class="button" value="*">*</button>
+                <button class="button" value="4">4</button>
+                <button class="button" value="5">5</button>
+                <button class="button" value="6">6</button>
+                <button class="button" value="-">-</button>
+                <button class="button" value="1">1</button>
+                <button class="button" value="2">2</button>
+                <button class="button" value="3">3</button>
+                <button class="button" value="+">+</button>
+                <button class="button" value=".">.</button>
+                <button class="button" value="0">0</button>
+                <button class="button" value="And">Ans</button>
+                <button class="button" value="=">=</button>
+            </div>
+        </div>
+    </div> -->
+    <button class='u-trigger' >i need a calculator</button>
+    <script src='./js/animate.js'></script>
+    <script src='./js/calculator.js'></script>
+    <script>
+        var calculator = new Calculator(
+                {animation: {
+                  enter: 'zoomIn',
+                  leave: 'zoomOut'}
+                });
+
+        document.querySelector('.u-trigger').addEventListener('click', function(){
+            calculator.show(); 
+        })
+    </script>
+</body>
+</html>

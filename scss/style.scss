@@ -1,0 +1,81 @@
+$width: 300px;
+$height: 350px;
+
+%clearfix{
+    display: block;visibility: hidden;clear: both;height: 0;overflow: hidden;content: '.';
+}
+
+@import "reset";
+.m-calculator {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(#000,.3);
+}
+.m-calculator{
+    .wrapper{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: $width;
+        height: $height;
+        margin-left: (-$width / 2);
+        margin-top: (-$height / 2);
+        padding: ($width / 60);
+        border-radius: 10px;
+        background-color: rgb(230, 230, 230);
+        text-align: center;
+    }
+        .header{
+            width: 100%;
+            height: ($height / 10);
+            line-height: ($height / 10);
+            h3 {
+                color: rgba(255, 193, 7,.5);
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .close{
+                position: absolute;
+                right: 20px;
+                top: 5px;
+                cursor: pointer;
+                font-size: 14px;
+                color: #aaa;
+                transition: .3s;
+                &:hover{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .textbox{
+            width: 90%;
+            height: 25px;
+            padding: 0 4px;
+            border: none;
+            text-align: right;
+            color: rgb(121, 85, 72);
+            font-size: 16px;
+        }
+        .buttons{
+            width: 90%;
+            margin: 10px auto;
+            background-color: rgb(230,230,230);
+            &:after{
+                @extend %clearfix;
+            }
+            .button{
+                float: left;
+                width: 63.5px;
+                height: 50px;
+                padding: 10px;
+                margin: 2px;
+                color: rgb(255, 172, 55);
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+            }
+        }
+}
